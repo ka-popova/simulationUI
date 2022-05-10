@@ -3,14 +3,10 @@ package com.example.popova_pjv212_simulationui;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import popova.simulation.context.GameController;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 public class HelloApplication extends Application {
     GameController gameController;
@@ -29,7 +25,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-        HelloController controller = fxmlLoader.getController();
+        UIController controller = fxmlLoader.getController();
 
 
         GameThread gameThread = new GameThread(gameController, controller);

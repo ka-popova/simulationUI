@@ -25,6 +25,12 @@ public class Fox extends Animal implements Eatable /*implements Moveable*/ {
             hare.setHealthToZero();
             return true;
         }
+
+        if (eatenItem instanceof Mouse mouse) {
+            setFoodLevel(getFoodLevel() + mouse.getFoodLevelIncreasing());
+            mouse.setHealthToZero();
+            return true;
+        }
         return false;
 
 

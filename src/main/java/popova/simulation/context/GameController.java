@@ -56,10 +56,14 @@ public class GameController {
                         continue;
                     }
                 }
+
                 if (item instanceof Animal animal) {
-                    if (animal.makeNewAnimal(forestMap, x, y)) {
-                        continue;
+                    try {
+                        if (animal.makeNewAnimal(forestMap, x, y)) {
+                            continue;
+                        }
                     }
+                    catch (IndexOutOfBoundsException ignored){}
                 }
                 if (item instanceof Moveable moveable) {
                     moveable.move(forestMap, x, y);

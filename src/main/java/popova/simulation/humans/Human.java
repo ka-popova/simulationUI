@@ -1,5 +1,6 @@
 package popova.simulation.humans;
 
+import popova.simulation.animals.Animal;
 import popova.simulation.interfaces.Killer;
 import popova.simulation.items.Alive;
 import popova.simulation.items.Item;
@@ -31,8 +32,16 @@ public abstract class Human extends Alive implements Killer {
 
     @Override
     public boolean kill(Item item) {
-        item.setHealthToZero();
-        return true;
+        if (killingItemsCount == 0) {
+            return false;
+        }
+        if (item instanceof Animal) {
+            item.setHealthToZero();
+            killingItemsCount--;
+            return true;
+        }
+        return false;
+
     }
 
     public abstract int getRange();

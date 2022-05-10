@@ -4,16 +4,22 @@ import popova.simulation.gui.ForestMap;
 import popova.simulation.items.Coordinates;
 import popova.simulation.items.Item;
 
-public interface Killer {
-    boolean kill(Item item);
 
+public interface Killer {
+
+    boolean kill(Item item);
     int getRange();
 
     private boolean getItemAndKill(ForestMap forestMap, int x, int y){
 
         Item item = forestMap.getItem(new Coordinates(x, y));
         if (item != null) {
-            return (kill(item));
+            boolean someoneKilled = (kill(item));
+            if (someoneKilled) {
+                System.out.println(this.getClass().getSimpleName()+" killed "+item.getClass().getSimpleName());
+            }
+            return someoneKilled;
+
         }
         return false;
     }

@@ -6,16 +6,7 @@ import popova.simulation.items.Coordinates;
 import popova.simulation.items.Item;
 
 public class Hunter extends Human {
-//    public static Hunter create (){
-//        Random r = new Random();
-//        int randSpeed = r.nextInt(6);
-//        int randAccuracy = r.nextInt(5)+3;
-//        int randKillingItemsCount = r.nextInt(10)+3;
-//
-//        Coordinates coordinates = new Coordinates (r.nextInt(MAX_X), r.nextInt(MAX_Y));
-//
-//        return new Hunter (randSpeed, randAccuracy, randKillingItemsCount, coordinates);
-//    }
+
 
     public Hunter(int speed, int accuracy, int killingRange, int killingItemsCount/*, Coordinates coordinates*/) {
         super(speed, accuracy, killingRange, killingItemsCount/*, coordinates*/);
@@ -122,8 +113,5 @@ public class Hunter extends Human {
             moveUp(forestMap, x, y);
             return;
         }
-
-
-//
     }
 }

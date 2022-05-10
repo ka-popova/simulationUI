@@ -23,9 +23,9 @@ public class ImageLoader {
 
     static {
         try {
-            InputStream hareInputStream = new FileInputStream("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\hare.png");
+            InputStream hareInputStream = new FileInputStream("src/images/hare.png");
             InputStream foxInputStream = new FileInputStream ("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\fox.png");
-            InputStream bearInputStream = new FileInputStream ("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\bear.png");
+            InputStream bearInputStream = new FileInputStream ("src/images/bear.png");
             InputStream mouseInputStream = new FileInputStream ("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\mouse.png");
             InputStream berryInputStream = new FileInputStream ("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\berry.png");
             InputStream hunterInputStream = new FileInputStream ("C:\\Users\\kasia\\IdeaProjects\\Popova_PJV212_simulationUI\\src\\images\\hunter.png");

@@ -1,5 +1,6 @@
 package popova.simulation.animals;
 
+import popova.simulation.items.Berry;
 import popova.simulation.items.Item;
 
 public class Bear extends Animal {
@@ -21,12 +22,16 @@ public class Bear extends Animal {
 
 
 
-
     @Override
     public boolean kill(Item eatenItem) {
         if (eatenItem instanceof Fox fox) {
             setFoodLevel(getFoodLevel() + fox.getFoodLevelIncreasing());
             fox.setHealthToZero();
+            return true;
+        }
+        if (eatenItem instanceof Berry berry) {
+            setFoodLevel(getFoodLevel() + berry.getFoodLevelIncreasing());
+            berry.setHealthToZero();
             return true;
         }
         return false;

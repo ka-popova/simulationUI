@@ -1,9 +1,6 @@
 package com.example.popova_pjv212_simulationui;
 
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -11,7 +8,7 @@ import popova.simulation.gui.ForestMap;
 import popova.simulation.items.Coordinates;
 import popova.simulation.items.Item;
 
-public class HelloController {
+public class UIController {
     @FXML
     private GridPane gridPane;
 
@@ -28,6 +25,11 @@ public class HelloController {
             }
         }
 
+
+    }
+
+    public void clearGridPane() {
+        gridPane.getChildren().clear();
 
     }
 
